@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--use constraint bec it is more easy to handle many views-->
+    <data>
+
+        <variable
+            name="email"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.welcome.WelcomeFragment">
+
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/akaya_telivigala"
+            android:paddingHorizontal="@dimen/paddingH"
+            android:paddingVertical="@dimen/paddingV"
+            android:text="@string/welcome_in_our_shoe_store_we_hope_you_enjoy_browsing_shoes"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/sizeMeduim"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin_top"
+            android:fontFamily="@font/akaya_telivigala"
+            android:paddingHorizontal="@dimen/paddingH"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/welcome"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            tools:text="@string/hi" />
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin_top"
+            android:fontFamily="@font/akaya_telivigala"
+            android:paddingHorizontal="@dimen/paddingH"
+            android:text="@{email}"
+            android:textAllCaps="true"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/hi"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            tools:text="arwa" />
+
+        <ImageView
+            android:id="@+id/shoeStore"
+            android:layout_width="@dimen/imageWidth"
+            android:layout_height="@dimen/imageWidth"
+            android:layout_marginTop="@dimen/small_margin_top"
+            android:contentDescription="@string/image"
+            android:padding="10dp"
+            android:src="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instruction" />
+
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/smallPaddingStart"
+            android:layout_marginTop="@dimen/meduimMarginTop"
+            android:fontFamily="@font/akaya_telivigala"
+            android:gravity="center"
+            android:text="@string/this_is_place_where_you_can_add_shoes_and_browse_between_them"
+            android:textColor="@color/yellow"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hi" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:backgroundTint="@color/babyBlue"
+            android:elevation="@dimen/marginTop70"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/next"
+            android:textColor="@color/darkBlue"
+            app:cornerRadius="@dimen/paddingV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeStore" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

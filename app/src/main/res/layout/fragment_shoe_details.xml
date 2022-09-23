@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    use Linear layout bec the vies is aligned vertically -->
+
+    <data>
+
+        <variable
+            name="newShoe"
+            type="com.example.android.udacityshoestoe.models.ModelShoe" />
+
+        <variable
+            name="shoeViewModel"
+            type="com.example.android.udacityshoestoe.ui.shoes.ShoeViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/smallPadding"
+        tools:context=".ui.shoes.ShoeDetailsFragment">
+
+
+        <EditText
+            android:id="@+id/edit_shoeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginTop70"
+            android:autofillHints="name"
+            android:hint="@string/enter_shoe_name"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/paddingH"
+            android:text="@={newShoe.shoeName}"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/textSize18"
+            android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_shoeCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/mTop"
+            android:autofillHints="name"
+            android:hint="@string/enter_shoe_company"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/paddingH"
+            android:text="@={newShoe.shoeCompany}"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/textSize18"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/edit_shoeName" />
+
+        <EditText
+            android:id="@+id/edit_shoeSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/mTop"
+            android:autofillHints="size"
+            android:hint="@string/enter_shoes_size"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:paddingHorizontal="6dp"
+            android:text="@={newShoe.shoeSize}"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/textSize18"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/edit_shoeCompany" />
+
+        <EditText
+            android:id="@+id/edit_shoeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/mTop"
+            android:autofillHints="text"
+            android:hint="@string/enter_the_description_of_the_shoes"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/paddingH"
+            android:text="@={newShoe.shoeDescription}"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/textSize18"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/edit_shoeSize" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_top"
+            android:paddingHorizontal="@dimen/paddingH">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_addShoe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_top"
+                android:backgroundTint="@color/yellow"
+                android:elevation="@dimen/elevation"
+                android:onClick="@{() -> shoeViewModel.updateShoeList(newShoe)}"
+                android:paddingHorizontal="@dimen/paddingV"
+                android:text="@string/add"
+                android:textColor="@color/purple"
+                app:cornerRadius="@dimen/cornerRadius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_top"
+                android:backgroundTint="@color/yellow"
+                android:elevation="@dimen/elevation"
+                android:text="@string/cancel"
+                android:textColor="@color/purple"
+                app:cornerRadius="@dimen/cornerRadius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_addShoe"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

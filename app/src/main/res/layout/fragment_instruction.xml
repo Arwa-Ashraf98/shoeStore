@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--use constraint bec -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.instruction.InstructionFragment"
+        >
+
+        <TextView
+            android:id="@+id/firstLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/marginTop70"
+            android:text="@string/please_do_not_duplicate_your_items"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:fontFamily="@font/akaya_telivigala"
+            android:textSize="@dimen/textSize18"
+            android:textColor="@color/purple"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondLine"
+            app:layout_constraintTop_toBottomOf="@id/firstLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:textSize="@dimen/smallSize"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textColor="@color/purple"
+            android:textStyle="italic"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/we_like_to_get_your_attention_to_add_real_item"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Navigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/browse_item"
+            android:textColor="@color/yellow"
+            app:cornerRadius="@dimen/smallSize"
+            android:elevation="@dimen/marginTop70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondLine" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

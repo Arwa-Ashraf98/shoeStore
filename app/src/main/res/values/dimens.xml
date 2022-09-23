@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginTop70">70dp</dimen>
+    <dimen name="sizeLarge">30sp</dimen>
+    <dimen name="smallPaddingStart">7dp</dimen>
+    <dimen name="margin_top">25dp</dimen>
+    <dimen name="sizeMeduim">25sp</dimen>
+    <dimen name="paddingH">10dp</dimen>
+    <dimen name="paddingV">15dp</dimen>
+    <dimen name="imageWidth">350dp</dimen>
+    <dimen name="small_margin_start">5sp</dimen>
+    <dimen name="constraint_begin">80dp</dimen>
+    <dimen name="small_padding_start">3sp</dimen>
+    <dimen name="small_margin_top">4dp</dimen>
+    <dimen name="padding_horizental">6dp</dimen>
+    <dimen name="smallPadding">2dp</dimen>
+    <dimen name="cardElvation">4dp</dimen>
+    <dimen name="elevation">0dp</dimen>
+    <dimen name="cornerRadius">16dp</dimen>
+    <dimen name="sixMargin">6dp</dimen>
+    <dimen name="meduimMarginTop">10dp</dimen>
+    <dimen name="smallSize">16sp</dimen>
+    <dimen name="textSize18">18sp</dimen>
+    <dimen name="conerRad">15dp</dimen>
+    <dimen name="mTop">15dp</dimen>
+</resources>

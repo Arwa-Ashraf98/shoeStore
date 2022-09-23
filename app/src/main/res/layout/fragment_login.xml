@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!--
+            Using ConstraintLayout as a first idea but either LinearLayout or ConstraintLayout
+            can work also.
+            it gives more control over the widgets.
+            Using Guid Lines to avoid fixed margins and padding so app can be more responsive.
+        -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.login.LoginFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="90dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="320dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="320dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textColor="@color/yellow"
+            app:layout_constraintGuide_begin="205dp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_email"
+            app:hintTextColor="@color/gray"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/guideline1"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:startIconTint="@color/yellow">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/akaya_telivigala"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallPaddingStart"
+                android:paddingEnd="@dimen/smallPaddingStart"
+                android:textColor="@color/purple" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallPaddingStart"
+            android:hint="@string/enter_your_password"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/yellow"
+            app:layout_constraintEnd_toEndOf="@id/emailTextField"
+            app:layout_constraintStart_toStartOf="@id/emailTextField"
+            app:layout_constraintTop_toBottomOf="@id/emailTextField">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/akaya_telivigala"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/smallPaddingStart"
+                android:paddingEnd="@dimen/smallPaddingStart"
+                android:textColor="@color/purple" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/akaya_telivigala"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:text="@string/login"
+            android:textColor="@color/purple"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@id/passTextField"
+            app:layout_constraintStart_toEndOf="@id/btn_signUp"
+            app:layout_constraintTop_toBottomOf="@id/passTextField" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/sign_up"
+            android:textColor="@color/purple"
+            android:textSize="15sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline4"
+            app:layout_constraintStart_toStartOf="@id/emailTextField"
+            app:layout_constraintTop_toBottomOf="@id/passTextField" />
+
+        <ProgressBar
+            android:id="@+id/myProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passTextField"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

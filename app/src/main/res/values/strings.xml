@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Udacity Shoe Stoe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_in_our_app">Welcome in our App</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="notEmpty">This Field Should no be Empty</string>
+    <string name="enterCorrectEmail">Please enter Correct Email</string>
+    <string name="passwordLengh">the password length should be more tha 6</string>
+    <string name="welcome_in_our_shoe_store_we_hope_you_enjoy_browsing_shoes">welcome in Our Shoe Store , We Hope you Enjoy Browsing shoes</string>
+    <string name="hi">Hi :</string>
+    <string name="this_is_place_where_you_can_add_shoes_and_browse_between_them">This is Place where you can add shoes and Browse between them</string>
+    <string name="next">next</string>
+    <string name="please_do_not_duplicate_your_items">please Do not Duplicate Your Items</string>
+    <string name="we_like_to_get_your_attention_to_add_real_item">we like to get your attention to add real Item</string>
+    <string name="browse_item">Browse Item</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="image">image</string>
+    <string name="add">add</string>
+    <string name="shoes_description">Shoes Description</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="name">Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_the_description_of_the_shoes">Enter The Description of The Shoes</string>
+    <string name="enter_shoes_size">Enter Shoes Size</string>
+    <string name="enter_shoe_company">Enter Shoe Company</string>
+    <string name="enter_shoe_name">Enter Shoe Name</string>
+    <string name="sign_out">Sign Out</string>
+</resources>
